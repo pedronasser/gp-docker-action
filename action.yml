@@ -23,8 +23,8 @@ inputs:
     description: 'Path to build context'
     default: "."
     required: false
-  pull-image:
-    description: 'Pull the image before buiding it'
+  extra-build-args:
+    description: 'Extra Build Args'
     default: "false"
     required: false
 runs:
@@ -38,6 +38,7 @@ runs:
     - ${{ inputs.dockerfile }}
     - ${{ inputs.build-context}}
     - ${{ inputs.pull-image}}
+    - ${{ inputs.extra-build-args}}
 branding:
   icon: 'box'
   color: 'blue'
